@@ -1,3 +1,4 @@
+require './corrector'
 # Person class to identify
 class Person
   def initialize(age:, name: 'Unknown', parent_permission: true)
@@ -5,6 +6,7 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @corrector = Corrector.new
   end
 
   attr_accessor :name, :age
@@ -19,6 +21,11 @@ class Person
   # I needed to do this is order to keep the method name required
   # in the project
   # rubocop:disable Naming/PredicateName
+
+  def validate_name
+    @name = @corrector.correct_name(@name)
+  end
+
   def is_of_age?
     @age >= 18
   end

@@ -2,7 +2,6 @@ require_relative './person'
 
 # Student class to compare
 class Student < Person
-  
   attr_reader :classroom
 
   def initialize(age:, classroom:, name: 'Unknown', parent_permission: true)

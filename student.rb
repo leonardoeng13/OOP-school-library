@@ -10,6 +10,11 @@ class Student < Person
   def play_hooky
     '¯\\(ツ)/¯'
   end
+
+  def classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.include?(self)
+  end
 end
 
 student = Student.new(age: 18, parent_permission: true, classroom: 'Psychologist 001')

@@ -14,6 +14,13 @@ This repository aims to practice OOP(Object Oriented Programming) for best pract
 - LinkedIn : [Leonardo de Andrade](https://www.linkedin.com/in/leonardodeandrade)
 - Twitter: [Leo de Andrade](https://twitter.com/andrede_leo)
 
+👤 **Herbert**
+
+- GitHub: [Herbert](https://github.com/Herbert)
+- LinkedIn : [Herbert](https://www.linkedin.com/in/Herbert)
+- Twitter: [v](https://twitter.com/Herbert)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

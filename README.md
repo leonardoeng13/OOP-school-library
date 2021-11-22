@@ -17,7 +17,7 @@ This repository aims to practice OOP(Object Oriented Programming) for best pract
 👤 **Herbert**
 
 - GitHub: [Herbert](https://github.com/herokudev)
-- LinkedIn : [Herbert](https://www.linkedin.com/in/herbert-orellana)
+- LinkedIn: [Herbert](https://www.linkedin.com/in/herbert-orellana)
 - Twitter: [v](https://twitter.com/HerbertOrellan4)
 
 

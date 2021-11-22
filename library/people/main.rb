@@ -35,7 +35,7 @@ class PeopleIntializer
       parent_permission = permission_resp.downcase == 'y'
 
       create_student(age, name, parent_permission)
-      
+
     when '2'
       print 'Age: '
       age = gets.chomp
@@ -56,7 +56,6 @@ class PeopleIntializer
     student = Student.new(age, name, parent_permission)
     @people << student
     puts "Person created successfully\n"
-
   end
 
   def create_teacher(age, name, specialization)

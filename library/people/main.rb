@@ -34,10 +34,8 @@ class PeopleIntializer
       permission_resp = gets.chomp
       parent_permission = permission_resp.downcase == 'y'
 
-      student = Student.new(age, name, parent_permission)
-      @people << student
-
-      puts "Person created successfully\n"
+      create_student(age, name, parent_permission)
+      
     when '2'
       print 'Age: '
       age = gets.chomp
@@ -46,15 +44,25 @@ class PeopleIntializer
       print 'Specialization: '
       specialization = gets.chomp
 
-      teacher = Teacher.new(age, name, specialization)
-      @people << teacher
-
-      puts "Person created successfully\n"
+      create_teacher(age, name, specialization)
 
     else
       puts 'Please choose number 1 or 2'
       nil
     end
+  end
+
+  def create_student(age, name, parent_permission)
+    student = Student.new(age, name, parent_permission)
+    @people << student
+    puts "Person created successfully\n"
+
+  end
+
+  def create_teacher(age, name, specialization)
+    teacher = Teacher.new(specialization, age, name)
+    @people << teacher
+    puts "Person created successfully\n"
   end
 end
 # rubocop:enable Metrics\CyclomaticComplexity, Metrics/MethodLength

@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/ModuleLength
+# rubocop:disable Metrics ModuleLength
 require 'json'
 require_relative 'person'
 require_relative 'teacher'
@@ -161,4 +161,3 @@ module SchoolOrganizer
     end
   end
 end
-# rubocop:enable Metrics/ModuleLength

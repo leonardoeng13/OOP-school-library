@@ -1,4 +1,4 @@
-# rubocop:disable Metrics\CyclomaticComplexity, Metrics/MethodLength
+\CyclomaticComplexity, Metrics/MethodLength
 
 require_relative 'Classroom'
 require_relative 'school_organizer'
@@ -31,8 +31,7 @@ class App
     puts 'Thank you for using this app!'
   end
 
-  # rubocop:disable Metrics/CyclomaticComplexity
-  def handle_option(option)
+    def handle_option(option)
     case option
     when '1'
       list_books

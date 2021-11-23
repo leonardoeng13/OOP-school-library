@@ -161,3 +161,4 @@ module SchoolOrganizer
     end
   end
 end
+# rubocop:enable Metrics\CyclomaticComplexity, Metrics/MethodLength

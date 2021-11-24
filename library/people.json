@@ -5,5 +5,12 @@
     "name": "viadinho",
     "age": "24",
     "parent_permission": null
+  },
+  {
+    "json_class": "Teacher",
+    "id": 118,
+    "name": "232323",
+    "age": "25",
+    "specialization": "2323232"
   }
 ]

@@ -150,10 +150,10 @@ module SchoolOrganizer
 
     if File.exist? file
         JSON.parse(File.read(file)).map do |rental|
-        book = @books.find { |rental_book| rental_book.title == rental['book_title'] }
         person = @people.find { |rental_person| rental_person.id == rental['person_id'] }
+        book = @books.find { |rental_book| rental_book.title == rental['book_title'] }
 
-        rental = Rental.new(rental['date'], book, person)
+        rental = Rental.new(rental['date'], person, book)
         @rentals.push(rental)
       end
     else

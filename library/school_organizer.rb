@@ -104,9 +104,9 @@ module SchoolOrganizer
   end
 
   def save_data
-    File.open('books.json', 'w') { |f| f.write (JSON.pretty_generate(@books)) }
-    File.open('people.json', 'w') { |f| f.write (JSON.pretty_generate(@people)) }
-    File.open('rentals.json', 'w') { |f| f.write (JSON.pretty_generate(@rentals)) }
+    File.open('books.json', 'w') { |f| f.write(JSON.pretty_generate(@books)) }
+    File.open('people.json', 'w') { |f| f.write(JSON.pretty_generate(@people)) }
+    File.open('rentals.json', 'w') { |f| f.write(JSON.pretty_generate(@rentals)) }
   end
 
   def parse_books
@@ -149,7 +149,7 @@ module SchoolOrganizer
     return [] unless File.exist? file
 
     if File.exist? file
-        JSON.parse(File.read(file)).map do |rental|
+      JSON.parse(File.read(file)).map do |rental|
         person = @people.find { |rental_person| rental_person.id == rental['person_id'] }
         book = @books.find { |rental_book| rental_book.title == rental['book_title'] }
 

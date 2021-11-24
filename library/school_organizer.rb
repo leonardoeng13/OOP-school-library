@@ -97,17 +97,16 @@ module SchoolOrganizer
 
   def list_rentals_by_person_id
     print 'ID of person: '
-    id = gets.chomp
 
     puts 'Rentals:'
 
-    @rentals.each { |rental| puts rental if rental.person.id == id.to_i }
+    @rentals.each { |rental| puts rental }
   end
 
   def save_data
-    File.open('books.json', 'w') { |f| f.write JSON.generate(@books) }
-    File.open('people.json', 'w') { |f| f.write JSON.generate(@people) }
-    File.open('rentals.json', 'w') { |f| f.write JSON.generate(@rentals) }
+    File.open('books.json', 'w') { |f| f.write (JSON.pretty_generate(@books)) }
+    File.open('people.json', 'w') { |f| f.write (JSON.pretty_generate(@people)) }
+    File.open('rentals.json', 'w') { |f| f.write (JSON.pretty_generate(@rentals)) }
   end
 
   def parse_books
@@ -147,9 +146,10 @@ module SchoolOrganizer
 
   def parse_rentals
     file = 'rentals.json'
+    return [] unless File.exist? file
 
     if File.exist? file
-      JSON.parse(File.read(file)).map do |rental|
+        JSON.parse(File.read(file)).map do |rental|
         book = @books.find { |rental_book| rental_book.title == rental['book_title'] }
         person = @people.find { |rental_person| rental_person.id == rental['person_id'] }
 

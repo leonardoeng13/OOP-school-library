@@ -13,15 +13,15 @@ class Rental
   end
 
   def to_s
-    "Date: #{@date}, Book \"#{book.title}\" by #{book.author}"
+    "Date: #{@date}, Book: #{@book}, Person: #{@person}"
   end
 
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
       'date' => @date,
-      'book_title' => @book.title,
-      'person_id' => @person.id
+      'book_title' => @book,
+      'person_id' => @person
     }.to_json(*args)
   end
 end

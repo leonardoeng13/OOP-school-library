@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "json_class": "Rental",
+    "date": "24112021",
+    "book_title": {
+      "json_class": "Student",
+      "id": 2,
+      "name": "viadinho",
+      "age": "24",
+      "parent_permission": null
+    },
+    "person_id": {
+      "json_class": "Book",
+      "title": "002",
+      "author": "2232"
+    }
+  }
+]

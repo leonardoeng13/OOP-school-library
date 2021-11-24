@@ -1,1 +1,9 @@
-[{"json_class":"Teacher","id":408,"name":"Ashley Washington","age":"34","specialization":"Starterk"},{"json_class":"Student","id":696,"name":"William snodgrass","age":"13","parent_permission":null}]
+[
+  {
+    "json_class": "Student",
+    "id": 2,
+    "name": "viadinho",
+    "age": "24",
+    "parent_permission": null
+  }
+]

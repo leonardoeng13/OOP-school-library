@@ -1,5 +1,3 @@
-require_relative 'rental'
-
 class Book
   attr_accessor :title, :author, :rentals
 
@@ -9,23 +7,15 @@ class Book
     @rentals = []
   end
 
-  def add_rental(date, person)
-    Rental.new(date, person, self)
+  def add_rental(rental)
+    @rentals << rental
+    rental.book = self
   end
 
-  def to_s
-    "Title: \"#{@title}\", Author: #{author}"
-  end
-
-  def to_json(*args)
+  def to_hash
     {
-      JSON.create_id => self.class.name,
-      :title => @title,
-      :author => @author
-    }.to_json(*args)
-  end
-
-  def self.from_json(object)
-    new(object['title'], object['author'])
+      'title' => @title,
+      'author' => @author
+    }
   end
 end

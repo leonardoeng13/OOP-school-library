@@ -1,17 +1,1 @@
-[
-  {
-    "json_class": "Book",
-    "title": "test",
-    "author": "test"
-  },
-  {
-    "json_class": "Book",
-    "title": "002",
-    "author": "002"
-  },
-  {
-    "json_class": "Book",
-    "title": "002",
-    "author": "2232"
-  }
-]
+[]

@@ -1,8 +1,10 @@
 require_relative 'person'
 
 class Teacher < Person
-  def initialize(age:, specialization:, name: 'Unknown', parent_permission: true)
-    super(name: name, age: age, parent_permission: parent_permission)
+  attr_reader :specialization
+
+  def initialize(age:, specialization:, name: 'Unknown', parent_permission: true, id: 0)
+    super(name: name, age: age, parent_permission: parent_permission, id: id)
     @specialization = specialization
   end
 
@@ -10,17 +12,13 @@ class Teacher < Person
     true
   end
 
-  def to_s
-    "[Teacher] #{super}"
-  end
-
-  def to_json(*args)
+  def to_hash
     {
-      JSON.create_id => self.class.name,
-      'id' => id,
-      'name' => name,
-      'age' => age,
-      'specialization' => @specialization
-    }.to_json(*args)
+      'type' => 'Teacher',
+      'name' => @name,
+      'specialization' => @specialization,
+      'age' => @age,
+      'id' => @id
+    }
   end
 end

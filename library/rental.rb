@@ -1,27 +1,22 @@
 class Rental
-  attr_reader :person, :book
-  attr_accessor :date
+  attr_accessor :date, :book, :person
 
-  def initialize(date, person, book)
+  def initialize(date, book, person)
     @date = date
 
-    @person = person
-    person.rentals << self
-
     @book = book
-    book.rentals << self
+    book.rentals << self unless book.rentals.include?(self)
+
+    @person = person
+    person.rentals << self unless person.rentals.include?(self)
   end
 
-  def to_s
-    "Date: #{@date}, Book: #{@book}, Person: #{@person}"
-  end
-
-  def to_json(*args)
+  def to_hash
     {
-      JSON.create_id => self.class.name,
       'date' => @date,
-      'book_title' => @book,
-      'person_id' => @person
-    }.to_json(*args)
+      'title' => @book.title,
+      'author' => @book.author,
+      'person-id' => @person.id
+    }
   end
 end

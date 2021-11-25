@@ -2,9 +2,16 @@
  </br>
  <div align="center">
   <em align="center" style>"Implementation of classes and objects in Ruby, also encapsulation and inheritance with Ruby."</em>
-  </div>
+ </div>
 
 This repository aims to practice OOP(Object Oriented Programming) for best practice. App School Library was made with Ruby Language.
+
+
+## Getting Started
+
+This repository is located on Github and you can get a copy with this link [here](https://github.com/leonardoeng13/OOP-school-library.git)
+
+In your terminal, go to the source code folder and execute "ruby ./library/main.rb".
 
 ## Author
 

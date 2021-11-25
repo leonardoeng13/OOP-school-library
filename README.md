@@ -6,12 +6,19 @@
 
 This repository aims to practice OOP(Object Oriented Programming) for best practice. App School Library was made with Ruby Language.
 
+![screenshot](./Screenshot.png)
+
 
 ## Getting Started
 
 This repository is located on Github and you can get a copy with this link [here](https://github.com/leonardoeng13/OOP-school-library.git)
 
 In your terminal, go to the source code folder and execute "ruby ./library/main.rb".
+
+
+## Testing
+
+From your terminal window inside of Visual Studio code run: "gem install rspec" and then  "rspec spec"
 
 ## Author
 
